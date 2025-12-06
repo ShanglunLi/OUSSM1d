@@ -18,3 +18,49 @@ You can install the development version of OUSSM1d from [GitHub](https://github.
 ``` r
 # install.packages("devtools")
 devtools::install_github("ShanglunLi/OUSSM1d")
+```
+
+## Quick Start Example
+
+This example demonstrates how to simulate an OUSSM process and estimate its parameters using Maximum Likelihood Estimation (MLE).
+
+``` r
+library(OUSSM1d)
+
+# 1. Simulate Data (mimicking a microbiome log-ratio series)
+set.seed(123)
+N <- 100
+tn.diff <- rep(1, N) # Regular time intervals (e.g., daily sampling)
+
+# Parameters based on paper simulations
+true_params <- list(H=0.5, theta=0.5, sigma=1.0, mu=0.0)
+
+sim_data <- simulation.OU(
+  H = true_params$H, 
+  theta = true_params$theta, 
+  sigma = true_params$sigma, 
+  tn.diff = tn.diff, 
+  mu = true_params$mu, 
+  N = N, 
+  sim.num = 1
+)
+
+y <- sim_data$ytn[1,] # Extract the first simulated path
+
+# 2. Estimate Parameters (MLE)
+est_result <- estimation.OU(
+  theta.init = 1.0, # Initial guess
+  ytn = y, 
+  N = N, 
+  tn.diff = tn.diff
+)
+
+# View estimated parameters
+print(est_result$result.para.dist)
+```
+
+## Citation
+
+If you use this package, please cite the accompanying article:
+
+> Li, S., Kenney, T., & Gu, H. (2025). State Space Modeling of the Ornstein-Uhlenbeck Process with Measurement Error: An Application to Microbiome Data. 
