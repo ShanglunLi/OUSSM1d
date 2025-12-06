@@ -3,7 +3,7 @@ Title: One-dimensional OUSSM implementation.
 Version: 0.0.0.9000
 Authors@R: 
     person("Shanglun", "Li", , "klonterli@gmail.com", role = c("aut", "cre"))
-Description: Implementation of the function mentioned in the paper: State Space Modeling of the Ornstein-Uhlenbeck Process with Measurement Error: An Application to Microbiome Data.
+Description: Inference functions for OUSSM model.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
