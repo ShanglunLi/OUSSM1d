@@ -12,3 +12,5 @@ Imports:
     hash,
     nnls,
     stats
+URL: https://github.com/ShanglunLi/OUSSM1d
+BugReports: https://github.com/ShanglunLi/OUSSM1d/issues
