@@ -1,9 +1,9 @@
 Package: OUSSM1d
-Title: What the Package Does (One Line, Title Case)
+Title: One-dimensional OUSSM implementation. 
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+    person("Shanglun", "Li", , "klonterli@gmail.com", role = c("aut", "cre"))
+Description: Implementation of the function mentioned in the paper: State Space Modeling of the Ornstein-Uhlenbeck Process with Measurement Error: An Application to Microbiome Data.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
