@@ -1,8 +1,8 @@
 # OUSSM1d
 
-The **OUSSM1d** package implements the framework described in **"State Space Modeling of the Ornstein-Uhlenbeck Process with Measurement Error: An Application to Microbiome Data"** by Shanglun Li, Toby Kenney, and Hong Gu.
+The **OUSSM1d** package implements the framework described in **"State Space Modeling of the Ornstein-Uhlenbeck Process with Measurement Error: An Application to Microbiome Data"** and **"On the Optimal Sampling Scheme for Ornstein-Uhlenbeck State-Space Models"** by Shanglun Li, Toby Kenney, and Hong Gu.
 
-It provides a likelihood-based framework grounded in Ornstein-Uhlenbeck (OU) state-space modeling to analyze longitudinal data, with a specific focus on microbiome log-ratio transformed abundances.
+It provides a likelihood-based framework grounded in Ornstein-Uhlenbeck (OU) state-space modeling to analyze longitudinal data, with a specific focus on microbiome log-ratio transformed abundances. Additionally, it provides tools to generate OUSSM trajectories under various sampling schemes (e.g., with and without repeated measurements) to validate the relationship between sampling intervals and estimation accuracy.
 
 ## Key Features
 
@@ -59,8 +59,4 @@ est_result <- estimation.OU(
 print(est_result$result.para.dist)
 ```
 
-## Citation
 
-If you use this package, please cite the accompanying article:
-
-> Li, S., Kenney, T., & Gu, H. (2025). State Space Modeling of the Ornstein-Uhlenbeck Process with Measurement Error: An Application to Microbiome Data. 
